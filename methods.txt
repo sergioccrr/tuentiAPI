@@ -1,6 +1,5 @@
 addPostToPhotoWall
-addPostToWall
-getAlbumPhotos
+addPostToProfileWall
 getAlbumPhotos
 getFriends
 getFriendsData
@@ -8,10 +7,11 @@ getFriendsNotifications
 getInbox
 getPhotoTags
 getPhotoWall
+getProfileWall
 getThread
+getUserAlbums
 getUserNotifications
 getUsersData
-getWall
 sendMessage
 setPhotoData
 setUserData
