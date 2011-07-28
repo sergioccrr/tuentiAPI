@@ -1,0 +1,320 @@
+/*
+ * scromega blog CMS
+ * Sergio Cruz aka scromega (scr.omega at gmail dot com) http://scromega.net
+ *
+ * Layout based on:
+ * http://cafeina.ladybenko.net/?p=310
+ * http://cafeina.ladybenko.net/?p=23
+ *
+ * Colour palette based on:
+ * XGF Bezerik theme. http://bezerik.es/me
+ * http://xyberneticos.com/index.php/2007/10/19/resaltar-mensajes-mediante-css/
+ *
+ * Pagination based on:
+ * http://mis-algoritmos.com/some-styles-for-your-pagination
+ *
+ */
+
+/* Basic */
+html {
+	background-color: #EEEEEE;
+	font-family: arial,helvetica,clean,sans-serif;
+	font-size: 13px;
+}
+body {
+	text-align: center;
+}
+a {
+	color: #000000;
+}
+img {
+	border: none;
+}
+acronym {
+	border-bottom: 1px dotted #000000;
+	cursor: help;
+}
+
+/* Layout */
+#container {
+	width: 950px;
+	margin: 0px auto;
+	text-align: left;
+}
+#sidebar {
+	width: 200px;
+	float: right;
+	padding: 10px;
+	/*margin-top: 10px;*/
+}
+#main {
+	margin-right: 225px;
+}
+
+/* Header */
+#header {
+	background: url('header.png') top left no-repeat;
+	width: 350px;
+	height: 50px;
+	margin: 0px;
+	padding: 0px;
+}
+#header h1 {
+	margin: 0px;
+}
+#header a span {
+	visibility: hidden;
+}
+#header a {
+	width: 350px;
+	height: 50px;
+	display: block;
+	padding: 0px;
+	margin: 0px;
+	text-decoration: none;
+}
+
+/* Footer */
+#footer {
+	clear: both;
+	margin-right: 225px;
+	margin-top: 10px;
+	padding: 1px 10px 1px 10px;
+	text-align: center;
+	background-color: #5D5D5D;
+	color: #FFFFFF;
+}
+#footer a {
+	color: #FFFFFF;
+	text-decoration: none;
+	border-bottom: 1px dotted #FFFFFF;
+}
+#footer a:hover {
+	text-decoration: none;
+	border-bottom: 1px solid #FFFFFF;
+}
+
+/* Boxes */
+.entry {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 10px;
+	background-color: #FFFFFF;
+	border: 1px solid #DFDFDF;
+}
+.minientry {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 5px 20px 5px 45px;
+	background: #FAF9F7 url('../images/note.png') center no-repeat;
+	background-position: 15px 50%;
+	border-top: 2px solid #DFDFDF;
+	border-bottom: 2px solid #DFDFDF;
+}
+.menu1 {
+	min-height: 100px;
+	padding: 10px;
+	background-color: #EEFFCF;
+	border-top: 5px solid #CDE4C7;
+}
+.menu2 {
+	min-height: 100px;
+	padding: 10px;
+	background-color: #D0EDF7;
+	border-top: 5px solid #7ABDD3;
+}
+
+/* Lists */
+li {
+	list-style: url('../images/bullet_black.png');
+}
+.li_go {
+	list-style: url('../images/bullet_go.png');
+}
+.li_feed {
+	list-style: url('../images/feed.png');
+}
+
+/* Titles */
+h2 {
+	margin-bottom: 10px;
+	color: #333333;
+	border-bottom: 2px solid #DFDFDF;
+}
+h2 a {
+	text-decoration: none;
+	color: #333333;
+}
+h4 {
+	margin-bottom: 10px;
+	font-size: 1.4em;
+	font-weight: normal;
+}
+
+/* Icons */
+.s_date, .s_comments, .s_comment, .s_trackback {
+	margin: 0;
+	padding: 10px 10px 10px 18px;
+}
+.s_date {
+	background: url('date.png') no-repeat left center;
+}
+.s_comments {
+	background: url('comments.png') no-repeat left center;
+}
+.s_comment {
+	background: url('../images/comment_edit.png') no-repeat left center;
+}
+.s_trackback {
+	background: url('../images/link.png') no-repeat left center;
+}
+.s_continue {
+	margin: 0;
+	padding: 10px 0 10px 18px;
+	background: url('../images/bullet_go.png') no-repeat left center;
+}
+.s_date, .s_comments a, .s_comment a, .s_trackback a, .s_continue a {
+	text-decoration: none;
+	color: #424040;
+}
+.s_comments a:hover, .s_comment a:hover, .s_trackback a:hover, .s_continue a:hover {
+	text-decoration: underline;
+}
+
+/* Code */
+pre.code {
+	overflow: auto;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: #F1F4F6;
+}
+
+/* Messages */
+.MsgError {
+	background: #FFEAE0 url('../images/exclamation.png') center no-repeat;
+	background-position: 15px 50%;
+	text-align: left;
+	padding: 5px 20px 5px 45px;
+	border-top: 2px solid #FBAB95;
+	border-bottom: 2px solid #FBAB95;
+	color: #000000;
+}
+.MsgInfo {
+	background: #E7F9F8 url('../images/information.png') center no-repeat;
+	background-position: 15px 50%;
+	text-align: left;
+	padding: 5px 20px 5px 45px;
+	border-top: 2px solid #B5D4FE;
+	border-bottom: 2px solid #B5D4FE;
+	color: #000000;
+}
+
+/* Comments (General) */
+hr.separator {
+	width: 95%;
+	height: 5px;
+	color: #FFD3B4;
+	background-color: #FFD3B4;
+	border: 0;
+}
+#comments {
+	padding: 10px;
+	background-color: #FFFFFF;
+	border: 1px solid #DFDFDF;
+}
+
+/* Comments and Trackbacks */
+.comment, .trackback {
+	/*min-height: 65px;*/
+	/*height: auto !important;*/
+	margin: 0 0 9px 0;
+	padding: 10px;
+	background-color: #FFFFFF;
+}
+.comment .cavatar {
+	width: 54px;
+	height: 54px;
+	float: left;
+	/*margin: 0 0 0 0;*/
+	border: 1px solid #DFDFDF;
+}
+.comment .ccontent {
+	/*min-height: 60px;*/
+	margin-left: 64px;
+}
+.comment .cinfo, .trackback .cinfo {
+	padding: 5px 0 5px 10px;
+	background-color: #F1F1F1;
+	border-bottom: 1px solid #E5E5E5;
+}
+.comment .cinfo .creply {
+	float: right;
+	margin-right: 10px;
+	padding-left: 18px;
+	background: url('../images/comment_edit.png') no-repeat left center;
+}
+.comment .ccontent p, .trackback .ccontent p {
+	margin-left: 10px;
+}
+
+/* Form Comment */
+.formComment label, .formComment input {
+	display: block;
+	float: left;
+	margin-bottom: 10px;
+}
+.formComment label {
+	text-align: right;
+	width: 95px;
+	padding-right: 20px;
+}
+form.formComment br {
+	clear: left;
+}
+.formComment .fbutton {
+	margin-left: 265px;
+}
+
+/* Pagination */
+div.pagination {
+	text-align: center;
+	padding: 7px;
+	margin: 3px;
+}
+div.pagination a {
+	padding: 2px 5px 2px 5px;
+	margin: 2px;
+	border: 1px solid #000000;
+	text-decoration: none;
+	color: #000000;
+}
+div.pagination a:hover, div.pagination a:active {
+	border: 1px solid #000000;
+	background-color: #5D5D5D;
+	color: #fff;
+}
+div.pagination span.current {
+	padding: 2px 5px 2px 5px;
+	margin: 2px;
+	border: 1px solid #000000;
+	font-weight: bold;
+	background-color: #5D5D5D;
+	color: #FFF;
+}
+div.pagination span.disabled {
+	padding: 2px 5px 2px 5px;
+	margin: 2px;
+	border: 1px solid #EEE;
+	color: #DDD;
+}
+
+/* Neko */
+#neko {
+	background: url('../images/cat_1.png') no-repeat scroll right bottom;
+	height: 150px;
+	width: 150px;
+	display: block;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+}
